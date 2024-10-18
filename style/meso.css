@@ -1,0 +1,421 @@
+body {
+  background-color: #e0e0e0;
+  color: #000000;
+  font-family: "Liberation Sans",sans-serif;
+  margin: 1em auto; /*auto;*/
+  text-align: center;
+  font-size: 12pt;
+  max-width: 80em;
+}
+
+h1 {
+  /*text-align: right; */
+  padding-bottom: 0.3em;
+}
+
+.subtitle {
+  display: block;
+  font-weight: normal;
+  font-size: 70%;
+  color: #777777;
+}
+
+h2 {
+  border-bottom: 1px solid #aaaaaa;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+code {
+  font-family: "Liberation Mono",monospace;
+  color: #666666
+}
+
+pre {
+  display: block;
+  font-family: "Liberation Mono",monospace;
+  color: #666666
+}
+
+pre.code {
+  padding-left: 1em;
+  display: block;
+  font-family: "Liberation Mono",monospace;
+  color: #666666
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  font-weight: bold;
+  color: #274df4;
+}
+
+pre.code a {
+  font-weight: normal;
+}
+
+#sides {
+  margin: 0;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+/*******************************************************************************
+ * Navigation bar
+ ******************************************************************************/
+#navcontainer {
+  padding-left: 2em;
+  height: 2em;
+}
+
+#navcontainer ul {
+  float: left;
+  list-style-type: none;
+  padding: 0.5em 0 0 0;
+  margin: 0;
+}
+
+#navcontainer li {
+  padding: 1em 1em 1em 1em;
+  height: 1em;
+  color: #000000;
+  display: inline;
+  font-weight: bold;
+  font-variant: small-caps;
+  position: relative;
+}
+
+#navcontainer li#cur {
+  background-color: #ffffff;
+}
+
+#navcontainer a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#navcontainer a:hover {
+  color: #777777
+}
+
+/*******************************************************************************
+ * Menu
+ ******************************************************************************/
+#menu {
+  text-align: left;
+  width: 16em;
+  float: left;
+  position: fixed;
+  margin-left: 60em;
+}
+
+#menu h2 {
+  font-variant: small-caps;
+  border-bottom: none;
+  padding-top: 0;
+  margin: 0.5em 0 0.5em 0;
+}
+
+/*#menu h2#cur {
+  Nothing 
+}*/
+
+#menu a {
+  text-decoration: none;
+  color: #AAAAAA;
+}
+
+#menu a:hover {
+  color: #777777;
+}
+
+/*******************************************************************************
+ * Sub-menu
+ ******************************************************************************/
+#sub-menu ul {
+  list-style-type: none;
+  font-weight: bold;
+  padding: 0 0 0 0;
+  margin: 0;
+  font-size: 12pt;
+}
+
+#sub-menu li {
+  padding: 0.2em 0 0.2em 0;
+}
+
+#sub-menu ul#lvl2 {
+  padding: 0 0 0 2em;
+  font-weight: normal;
+  font-size: 12pt;
+}
+
+#sub-menu ul#lvl2 a {
+  font-weight: normal;
+}
+
+#sub-menu li#cur {
+  color: #f44d27
+}
+
+#sub-menu a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#sub-menu a:hover {
+  color: #777777;
+}
+
+#sub-menu h2 {
+  color: #000000;
+}
+
+#sub-menu {
+  border-top: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+/*******************************************************************************
+ * Content & news
+ ******************************************************************************/
+#content {
+  padding: 1em 2em 1em 2em;
+  background-color: #ffffff;
+  text-align: left;
+  width: 54em;
+  float: left;
+  overflow: hidden;
+}
+
+.news {
+  float: right;
+  margin: 0 0 0 1em;
+  padding: 0 0 0 0.5em;
+  background-color: #e0e0e0;
+  width: 15em;
+  text-align: left;
+}
+
+.img {
+  float: right;
+  margin: 0em 0em 1em 1em;
+}
+
+.video {
+  text-align: center;
+  margin: 1em 1em 1em 1em;
+}
+
+.caption {
+  text-align: left;
+  font-style: italic;
+  font-size: 8pt;
+  margin: 0 0.5em 0 0.5em;
+  color: #666666
+}
+
+#info {
+  margin-top: 3em;
+  font-size: 8pt;
+  color: #777777;
+  line-height: 1.4;
+}
+
+#info a {
+  color: #333333;
+  font-weight: normal;
+}
+
+/*******************************************************************************
+ * Main title
+ ******************************************************************************/
+#title {
+  float: left;
+  font-variant: small-caps;
+  padding: 2.0em 2.5em 1.5em 1.5em;
+  margin: 0;
+  text-align: center;
+  color: #777777;
+}
+
+#title h1 {
+  padding-top: 0.5em;
+  margin: 0;
+}
+
+#title hr {
+  width: 30%;
+  padding-top: 1em;
+}
+
+#title h2 {
+  color: #000000;
+  padding: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+#title a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/*******************************************************************************
+ * Footer
+ ******************************************************************************/
+#footer {
+  text-align: left;
+  clear: both;
+  color: #777;
+  padding: 1.0em 0em 0em 2em;
+  font-size: 8pt;
+}
+
+#footer a {
+  color: #333333;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+/*******************************************************************************
+ * Table
+ ******************************************************************************/
+td {
+  padding: 0em 2em 0em 2em;
+  margin: 0em;
+  text-align: center;
+}
+
+
+th {
+  font-variant: small-caps;
+  padding: 0.5em 2em 0.5em 2em;
+  margin: 0em;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+tr:nth-child(2n+1) {
+  background-color: #F7F6F1;
+}
+
+table {
+  border-spacing: 0;
+}
+
+/*******************************************************************************
+ * Miscellaneous
+ ******************************************************************************/
+.app td {
+  text-align: left;
+  margin: 0;
+  padding: 0em 1em 0em 1em;
+}
+
+.app td:nth-child(2n+1) {
+  text-align: right;
+}
+
+
+.app tr {
+  background: #fff;
+}
+
+.app table {
+  border-spacing: 0.5em;
+  margin-left: 5em;
+}
+
+.app input[type=number] {
+  background: #FCFCFC;
+  border: 2px solid #DDD;
+  padding: 0em 0.5em 0em 0.5em;
+  color: #666;
+  width: 5em;
+}
+
+.app
+input[type=text] {
+  border: none;
+  background: #fff;
+  width: 5em
+}
+
+.app
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.app
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.app input[type=number]:focus {
+  background: #FFF;
+  border-color: #f44d27;
+  color: #000;
+}
+
+/*.app input:invalid {
+  box-shadow: none;
+  background: #FCFCFC;
+  color: #f00;
+}*/
+
+.app button {
+    background-color: #f0f0f0; /* Green */
+    border: none;
+    padding: 0.2em 0.2em;
+    text-align: center;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+
+/*******************************************************************************
+ * Popup
+ ******************************************************************************/
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  color: #225588;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 18em;
+  background-color: #e0e0e0;
+  text-decoration: none;
+  font-weight: normal;
+  color: #555555;
+  font-style: normal;
+  text-align: left;
+  padding: 1em 1em;
+  position: absolute;
+  z-index: 1;
+  top: 130%;
+  left: 50%;
+  margin-left: -9em;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+}
+
