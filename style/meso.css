@@ -1,15 +1,20 @@
+@font-face {
+  font-family: "Courier Prime";
+  src: url('fonts/Courier Prime.ttf') format("truetype");
+}
+
 body {
-  background-color: #e0e0e0;
-  color: #000000;
+  background-color: #fff;
+  color: #000;
   font-family: "Liberation Sans",sans-serif;
-  margin: 1em auto; /*auto;*/
-  text-align: center;
-  font-size: 12pt;
-  max-width: 80em;
+  margin: 1em auto;
+  padding: 0em 1em 0em 1em;
+  text-align: left;
+  font-size: 1em;
+  max-width: 50em;
 }
 
 h1 {
-  /*text-align: right; */
   padding-bottom: 0.3em;
 }
 
@@ -21,27 +26,27 @@ h1 {
 }
 
 h2 {
-  border-bottom: 1px solid #aaaaaa;
   padding-top: 0.3em;
   padding-bottom: 0.3em;
 }
 
+h4 {
+  padding-left: 1em;
+}
+
 code {
   font-family: "Liberation Mono",monospace;
-  color: #666666
 }
 
 pre {
   display: block;
   font-family: "Liberation Mono",monospace;
-  color: #666666
 }
 
 pre.code {
-  padding-left: 1em;
+  padding-left: 2em;
   display: block;
   font-family: "Liberation Mono",monospace;
-  color: #666666
 }
 
 img {
@@ -51,7 +56,7 @@ img {
 
 a {
   font-weight: bold;
-  color: #274df4;
+  color: #225588;
 }
 
 pre.code a {
@@ -68,64 +73,46 @@ hr {
 }
 
 /*******************************************************************************
- * Navigation bar
+ * Two columns layout
  ******************************************************************************/
-#navcontainer {
-  padding-left: 2em;
-  height: 2em;
-}
-
-#navcontainer ul {
+.column {
   float: left;
-  list-style-type: none;
-  padding: 0.5em 0 0 0;
-  margin: 0;
+  width: 50%;
 }
 
-#navcontainer li {
-  padding: 1em 1em 1em 1em;
-  height: 1em;
-  color: #000000;
-  display: inline;
-  font-weight: bold;
-  font-variant: small-caps;
-  position: relative;
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-#navcontainer li#cur {
-  background-color: #ffffff;
+/*******************************************************************************
+ * Select
+******************************************************************************/
+#select {
+  float: right;
 }
 
-#navcontainer a {
+#select a {
+  font-weight: normal;
+  color: #AAAAAA;
   text-decoration: none;
-  color: #000000;
 }
 
-#navcontainer a:hover {
-  color: #777777
+#select a:hover {
+  color: #777777;
 }
 
 /*******************************************************************************
  * Menu
  ******************************************************************************/
 #menu {
-  text-align: left;
-  width: 16em;
-  float: left;
-  position: fixed;
-  margin-left: 60em;
-}
-
-#menu h2 {
+  width: 100%;
   font-variant: small-caps;
-  border-bottom: none;
-  padding-top: 0;
-  margin: 0.5em 0 0.5em 0;
+  font-size: 120%;
+  font-weight: bold;
 }
-
-/*#menu h2#cur {
-  Nothing 
-}*/
 
 #menu a {
   text-decoration: none;
@@ -139,73 +126,53 @@ hr {
 /*******************************************************************************
  * Sub-menu
  ******************************************************************************/
-#sub-menu ul {
-  list-style-type: none;
-  font-weight: bold;
-  padding: 0 0 0 0;
-  margin: 0;
-  font-size: 12pt;
-}
-
-#sub-menu li {
-  padding: 0.2em 0 0.2em 0;
-}
-
-#sub-menu ul#lvl2 {
-  padding: 0 0 0 2em;
-  font-weight: normal;
-  font-size: 12pt;
-}
-
-#sub-menu ul#lvl2 a {
-  font-weight: normal;
-}
-
-#sub-menu li#cur {
+.cur {
   color: #f44d27
+}
+
+#sub-menu {
+  padding-bottom: 1em;
 }
 
 #sub-menu a {
   text-decoration: none;
+  font-weight: normal;
   color: #000000;
 }
 
 #sub-menu a:hover {
   color: #777777;
-}
-
-#sub-menu h2 {
-  color: #000000;
-}
-
-#sub-menu {
-  border-top: 1px solid #aaaaaa;
-  border-bottom: 1px solid #aaaaaa;
+  font-weight: normal;
 }
 
 /*******************************************************************************
  * Content & news
  ******************************************************************************/
 #content {
-  padding: 1em 2em 1em 2em;
-  background-color: #ffffff;
   text-align: left;
-  width: 54em;
-  float: left;
+  max-width: 50em;
   overflow: hidden;
+}
+
+.select-langage {
+  font-variant: small-caps;
+  float: right;
+  color: #000000;
 }
 
 .news {
   float: right;
-  margin: 0 0 0 1em;
+  clear: right;
+  margin: 0 0 0.5em 1em;
   padding: 0 0 0 0.5em;
-  background-color: #e0e0e0;
+  background-color: #f5f5f5;
   width: 15em;
   text-align: left;
 }
 
 .img {
   float: right;
+  clear: right;
   margin: 0em 0em 1em 1em;
 }
 
@@ -217,14 +184,14 @@ hr {
 .caption {
   text-align: left;
   font-style: italic;
-  font-size: 8pt;
+  font-size: 90%;
   margin: 0 0.5em 0 0.5em;
   color: #666666
 }
 
 #info {
   margin-top: 3em;
-  font-size: 8pt;
+  font-size: 80%;
   color: #777777;
   line-height: 1.4;
 }
@@ -239,11 +206,12 @@ hr {
  ******************************************************************************/
 #title {
   float: left;
-  font-variant: small-caps;
-  padding: 2.0em 2.5em 1.5em 1.5em;
+  font-family: "Courier Prime";
+  padding: 0.0em 2.0em 0.5em 1.5em;
   margin: 0;
   text-align: center;
-  color: #777777;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 #title h1 {
@@ -273,10 +241,9 @@ hr {
  ******************************************************************************/
 #footer {
   text-align: left;
-  clear: both;
   color: #777;
-  padding: 1.0em 0em 0em 2em;
-  font-size: 8pt;
+  padding: 2.0em 0em 0em 2em;
+  font-size: 80%;
 }
 
 #footer a {
@@ -288,14 +255,12 @@ hr {
 /*******************************************************************************
  * Table
  ******************************************************************************/
-td {
-  padding: 0em 2em 0em 2em;
-  margin: 0em;
-  text-align: center;
+table.list {
+  border-spacing: 0;
+  width: 100%;
 }
 
-
-th {
+th.list {
   font-variant: small-caps;
   padding: 0.5em 2em 0.5em 2em;
   margin: 0em;
@@ -303,12 +268,18 @@ th {
   background-color: #ffffff;
 }
 
-tr:nth-child(2n+1) {
-  background-color: #F7F6F1;
+.list tr:nth-child(2n+1) {
+  background-color: #f5f5f5;
 }
 
-table {
-  border-spacing: 0;
+td.list {
+  padding: 0em 2em 0em 2em;
+  margin: 0em;
+  text-align: center;
+}
+
+td {
+  vertical-align: top;
 }
 
 /*******************************************************************************
@@ -323,7 +294,6 @@ table {
 .app td:nth-child(2n+1) {
   text-align: right;
 }
-
 
 .app tr {
   background: #fff;
@@ -355,10 +325,10 @@ input[type=number] {
 }
 
 .app
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .app input[type=number]:focus {
@@ -381,7 +351,6 @@ input[type=number]::-webkit-outer-spin-button {
     font-variant: small-caps;
     font-weight: bold;
 }
-
 
 /*******************************************************************************
  * Popup
@@ -419,3 +388,115 @@ input[type=number]::-webkit-outer-spin-button {
   visibility: visible;
 }
 
+/*******************************************************************************
+ * Mandoc
+ * CSS derivative written by Ingo Schwarze <schwarze@openbsd.org> for
+ * OpenBSD man pages
+ ******************************************************************************/
+.manual-text {
+  margin-left: 6em;
+}
+
+h1.Sh {
+  font-size: 1.5em;
+  margin-left: -4em;
+}
+
+h2.Ss {
+  font-size: 1.5em;
+  margin-left: -2.0em;
+  border-bottom: none;
+  padding: 0em;
+}
+
+code.In, code.Nm, .Cm, .Fd, .Fl, .Fn, .Ic {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.permalink {
+  border-bottom: thin dotted;
+  color: inherit;
+  font: inherit;
+  text-decoration: inherit;
+}
+
+.Nd, .Bf, .Op { display: inline; }
+.Pa, .Ad { font-style: italic; }
+.Ms { font-weight: bold; }
+
+/* Tables */
+table.head, table.foot { width: 100%; border-spacing: 0; }
+table.head { padding-top: 2em }
+td.head-rtitle, td.foot-os { text-align: right; }
+td.head-vol { text-align: center; }
+td.head-ltitle { margin: 0em; padding: 0em; text-align: left; }
+
+/* Display and lists */
+.Bd-indent { margin-left: 3.8em; }
+.Bl-bullet { list-style-type: disc; padding-left: 1em; }
+.Bl-bullet > li { }
+.Bl-dash { list-style-type: none; padding-left: 0em; }
+.Bl-dash > li { text-indent: -1.3em; }
+.Bl-dash > li:before { content: "\2014  "; }
+.Bl-item { list-style-type: none; padding-left: 0em; }
+.Bl-item > li { }
+.Bl-compact > li { margin-top: 0em; }
+.Bl-enum {  padding-left: 2em; }
+.Bl-enum > li { }
+.Bl-compact > li { margin-top: 0em; }
+.Bl-diag { }
+.Bl-diag > dt { font-style: normal; font-weight: bold; }
+.Bl-diag > dd { margin-left: 0em; }
+.Bl-hang { }
+.Bl-hang > dt { }
+.Bl-hang > dd { margin-left: 5.5em; }
+.Bl-inset { }
+.Bl-inset > dt { }
+.Bl-inset > dd { margin-left: 0em; }
+.Bl-ohang { }
+.Bl-ohang > dt { }
+.Bl-ohang > dd { margin-left: 0em; }
+.Bl-tag {  margin-top: 0.6em; margin-left: 5.5em; }
+.Bl-tag > dt {
+  float: left;
+  margin-top: 0em;
+  margin-left: -5.5em;
+  padding-right: 0.5em;
+  vertical-align: top;
+}
+.Bl-tag > dd {
+  clear: right;
+  column-count: 1;  /* Force block formatting context. */
+  width: 100%;
+  margin-top: 0em;
+  margin-left: 0em;
+  margin-bottom: 0.6em;
+  vertical-align: top;
+}
+.Bl-compact {  margin-top: 0em; }
+.Bl-compact > dd { margin-bottom: 0em; }
+.Bl-compact > dt { margin-top: 0em; }
+.Bl-column { }
+.Bl-column > tbody > tr { }
+.Bl-column > tbody > tr > td { margin-top: 1em; }
+.Bl-compact > tbody > tr > td { margin-top: 0em; }
+.Rs { font-style: normal; font-weight: normal; }
+.RsA { }
+.RsB { font-style: italic; font-weight: normal; }
+.RsC { }
+.RsD { }
+.RsI { font-style: italic; font-weight: normal; }
+.RsJ { font-style: italic; font-weight: normal; }
+.RsN { }
+.RsO { }
+.RsP { }
+.RsQ { }
+.RsR { }
+.RsT { text-decoration: underline; }
+.RsU { }
+.RsV { }
+
+.eqn { }
+.tbl td {  vertical-align: middle; }
+.HP { margin-left: 3.8em; text-indent: -3.8em; }
