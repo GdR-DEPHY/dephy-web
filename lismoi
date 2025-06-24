@@ -1,0 +1,16 @@
+Le contenu de ce répertoire est cloné depuis github.com/gdr-dephy/dephy-web
+et publié sur https://web.lmd.jussieu.fr/DEPHY/
+tous les jours à 13h
+
+Donc si on modifie ce répertoire et qu'on repousse la commission sur github,
+le site web sera mis à jour automatiquement à 13h.
+
+La publication est réalisée à l'aide du Makefile qui copie les fichiers depuis
+le répertoire cloné vers le répertoire WWW/ exposé via http.
+
+La machine sur lequel tourne le serveur apache est lmd-webs sur le réseau du LMD,
+accessible via la passerelle gurtu.
+
+Si on y a accès, on peut s'y connecter et faire la mise à jour manuellement :
+$ cd /home/dephy
+$ bash maj_and_publish_dephy-web.sh
