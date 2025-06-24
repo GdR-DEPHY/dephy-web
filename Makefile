@@ -1,5 +1,4 @@
 PREFIX=$(HOME)/WWW/
-PREFIX=/tmp/WWW/
 
 files=*dephy*.html
 repos=images/ style/
